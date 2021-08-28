@@ -1,0 +1,53 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<albums xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///D:/GitRepos/mapforce-labs/schemas/music.xsd">
+	<album>
+		<title>Pressure Machine</title>
+		<artist>Killers</artist>
+		<price>13.99</price>
+	</album>
+	<album>
+		<title>Sour</title>
+		<artist>Olivia Rodrigo</artist>
+		<price>10.99</price>
+	</album>
+	<album>
+		<title>Happier than Ever</title>
+		<artist>Billy Eilish</artist>
+		<price>11.99</price>
+	</album>
+	<album>
+		<title>Therapy</title>
+		<artist>Anne-Marie</artist>
+		<price>9.99</price>
+	</album>
+	<album>
+		<title>Divide</title>
+		<artist>ed Sheeran</artist>
+		<price>14.99</price>
+	</album>
+	<album>
+		<title>All Over the Place</title>
+		<artist>KSI</artist>
+		<price>13.99</price>
+	</album>
+	<album>
+		<title>Divinely Uninspired to the Hellish Extent</title>
+		<artist>Lewis Capaldi</artist>
+		<price>12.99</price>
+	</album>
+	<album>
+		<title>Number Ones</title>
+		<artist>Michael Jackson</artist>
+		<price>4.99</price>
+		<tracks>
+			<track>Thriller</track>
+			<track>Billy Jean</track>
+			<track>Beat It</track>
+		</tracks>
+	</album>
+	<album>
+		<title>Justice</title>
+		<artist>Justin Bieber</artist>
+		<price>10</price>
+	</album>
+</albums>

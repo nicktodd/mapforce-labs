@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2021r3 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="29">
+	<resources>
+		<datasources>
+			<datasource name="conygre">
+				<properties JDBCDriver="com.mysql.jdbc.Driver" JDBCDatabaseURL="jdbc:mysql://localhost/conygre" DBUser="root" DBPassword="c0nygre1"/>
+				<database_connection vendor="mysql" import_kind="ADO.NET" version="8.0" ConnectionString="Host=localhost; DataBase=conygre; Protocol=TCP; Port=3306; Compress=false; Pooling=true; Min Pool Size=0; Max Pool Size=100; Connection Lifetime=0; User id=root;Password=c0nygre1" DriverClass="MySql.Data.MySqlClient" Assembly="MySql.Data.MySqlClient.MySqlClientFactory, MySql.Data, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" name="conygre" path="conygre">
+					<properties>
+						<property name="Database Kind" value="MySQL"/>
+						<property name="Import Kind" value="ADO.NET"/>
+						<property name="Root Object" value="conygre"/>
+						<property name="Connect Script"/>
+						<property name="User ID"/>
+						<property name="Password" value="a1HuTH-gGFB67-5zGN61"/>
+					</properties>
+					<LocalViewStorage/>
+					<LocalRelationsStorage>
+						<LocalRelationElement name="Untitled">
+							<SourceTable>
+								<PathElement Name="conygre" Kind="Database"/>
+								<PathElement Name="tracks" Kind="Table"/>
+							</SourceTable>
+							<SourceColumns>
+								<Column name="cd_id" kind="Column"/>
+							</SourceColumns>
+							<DestinationTable>
+								<PathElement Name="conygre" Kind="Database"/>
+								<PathElement Name="compact_discs" Kind="Table"/>
+							</DestinationTable>
+							<DestinationColumns>
+								<Column name="id" kind="Column"/>
+							</DestinationColumns>
+						</LocalRelationElement>
+					</LocalRelationsStorage>
+					<RecordSetStructureStorage/>
+				</database_connection>
+			</datasource>
+		</datasources>
+	</resources>
+	<component name="defaultmap" uid="1" editable="1">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="db" library="db" uid="3" kind="15">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="543" lty="54" rbx="693" rby="254"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="document" ns="1" expanded="1">
+								<entry name="compact_discs" type="table" inpkey="13" expanded="1">
+									<entry name="title" inpkey="14"/>
+									<entry name="artist" inpkey="15"/>
+									<entry name="price" inpkey="16"/>
+									<entry name="tracks|cd_id" type="table" inpkey="17" expanded="1">
+										<entry name="title" inpkey="18"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<database ref="conygre">
+							<data>
+								<selections>
+									<selection>
+										<PathElement Name="conygre" Kind="Database"/>
+										<PathElement Name="compact_discs" Kind="Table"/>
+									</selection>
+									<selection>
+										<PathElement Name="conygre" Kind="Database"/>
+										<PathElement Name="tracks" Kind="Table"/>
+									</selection>
+								</selections>
+							</data>
+						</database>
+					</data>
+				</component>
+				<component name="music" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="43" lty="43" rbx="331" rby="243"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="albums" expanded="1">
+										<entry name="album" outkey="19" expanded="1">
+											<entry name="title" outkey="20"/>
+											<entry name="artist" outkey="21"/>
+											<entry name="price" outkey="22"/>
+											<entry name="tracks" expanded="1">
+												<entry name="track" outkey="24"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\..\schemas\music.xsd" instanceroot="{}albums" inputinstance="..\..\data\music.xml" outputinstance="..\..\schemas\music.xml"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="19">
+						<edges>
+							<edge vertexkey="13"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="20">
+						<edges>
+							<edge vertexkey="14"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="21">
+						<edges>
+							<edge vertexkey="15"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="22">
+						<edges>
+							<edge vertexkey="16"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="24">
+						<edges>
+							<edge vertexkey="17"/>
+							<edge vertexkey="18"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

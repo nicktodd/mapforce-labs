@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2021 rel. 3 (x64) (http://www.altova.com) by Nick Todd (Conygre Consultants) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="scores">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="score" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="studentCode" type="xs:string"/>
+							<xs:element name="percentage" type="xs:int"/>
+							<xs:element name="dateCompleted" type="xs:date"/>
+							<xs:element name="timeSubmitted" type="xs:time"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="averageScore" type="xs:decimal" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

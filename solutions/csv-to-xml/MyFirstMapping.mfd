@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2021r3 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap" uid="1" editable="1" blackbox="0">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="Scores" library="text" uid="2" kind="16">
+					<properties/>
+					<view ltx="-1" lty="106" rbx="219" rby="306"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Rows" outkey="8" expanded="1">
+										<entry name="NAME" outkey="9"/>
+										<entry name="PERCENTAGESCORE" outkey="10"/>
+										<entry name="SUBMISSIONTIME" outkey="11"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<text type="csv" encoding="1000" byteorder="1" byteordermark="0" inputinstance="..\..\data\raw-test-scores.csv">
+							<settings separator="," quote="&quot;" firstrownames="true" removeempty="true">
+								<names root="Scores" block="Rows">
+									<field0 name="NAME" type="string"/>
+									<field1 name="PERCENTAGESCORE" type="integer"/>
+									<field2 name="SCORE" type="integer"/>
+									<field3 name="SUBMISSIONTIME" type="dateTime"/>
+									<field4 name="TESTID" type="string"/>
+									<field5 name="Field6" type="string"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+				<component name="scores" library="xml" uid="3" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="1000" lty="92" rbx="1282" rby="292"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="scores" expanded="1">
+										<entry name="score" inpkey="1" expanded="1">
+											<entry name="studentCode" inpkey="2" expanded="1"/>
+											<entry name="percentage" inpkey="3" expanded="1"/>
+											<entry name="dateCompleted" inpkey="4" expanded="1"/>
+											<entry name="timeSubmitted" inpkey="5" expanded="1"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\..\schemas\scores.xsd" instanceroot="{}scores" outputinstance="..\..\schemas\scores.xml"/>
+					</data>
+				</component>
+				<component name="Rows" library="core" uid="13" kind="30">
+					<sources>
+						<datapoint pos="0" key="14"/>
+						<datapoint pos="1" key="15"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="16"/>
+					</targets>
+					<view ltx="799" lty="92" rbx="909" rby="148"/>
+					<data>
+						<sort>
+							<collation/>
+							<key direction="ascending"/>
+						</sort>
+					</data>
+				</component>
+				<component name="Rows" library="core" uid="8" kind="3">
+					<sources>
+						<datapoint pos="0" key="17"/>
+						<datapoint pos="1" key="18"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="19"/>
+						<datapoint/>
+					</targets>
+					<view ltx="603" lty="42" rbx="716" rby="96"/>
+				</component>
+				<component name="constant" library="core" uid="12" kind="2">
+					<targets>
+						<datapoint pos="0" key="20"/>
+					</targets>
+					<view ltx="275" lty="52" rbx="321" rby="69"/>
+					<data>
+						<constant value="70" datatype="decimal"/>
+					</data>
+				</component>
+				<component name="greater" library="core" uid="11" kind="5">
+					<sources>
+						<datapoint pos="0" key="21"/>
+						<datapoint pos="1" key="22"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="23"/>
+					</targets>
+					<view ltx="413" lty="42" rbx="477" rby="96"/>
+				</component>
+				<component name="time-from-datetime" library="lang" uid="7" kind="5">
+					<sources>
+						<datapoint pos="0" key="12"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="13"/>
+					</targets>
+					<view ltx="351" lty="291" rbx="477" rby="329"/>
+				</component>
+				<component name="date-from-datetime" library="lang" uid="5" kind="5">
+					<sources>
+						<datapoint pos="0" key="6"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="7"/>
+					</targets>
+					<view ltx="350" lty="226" rbx="477" rby="264"/>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="1"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="9">
+						<edges>
+							<edge vertexkey="2"/>
+							<edge vertexkey="15"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="10">
+						<edges>
+							<edge vertexkey="3"/>
+							<edge vertexkey="22"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="4"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="5"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="11">
+						<edges>
+							<edge vertexkey="6"/>
+							<edge vertexkey="12"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="19">
+						<edges>
+							<edge vertexkey="14"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="8">
+						<edges>
+							<edge vertexkey="17"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="23">
+						<edges>
+							<edge vertexkey="18"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="20">
+						<edges>
+							<edge vertexkey="21"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>
