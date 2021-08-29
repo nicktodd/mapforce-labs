@@ -1,0 +1,95 @@
+<course code="CONJAVXML1" colour="grey">
+	<category>XML</category>
+	<category>Java</category>
+	<category>eGIF</category>
+	<title>
+					Building Effective XML Applications Using the Java Programming Language 
+				</title>
+	<outline>This course focuses on how XML based software can be built using the Java programming language. The course covers the JAXP API, including the DOM and SAX APIs, processing XML using XSLT, and Data Binding using JAXB. It also looks at how XML validation can be done against XML Schemas using Java technology. The course will also introduce how Web services can be developed using the Java Programming Language. </outline>
+	<duration>35432.5</duration>
+	<objectives>
+		<objective>Understand where XML can best be applied within Java based applications </objective>
+		<objective>Use the SAX APIs for parsing XML files and streams </objective>
+		<objective>Use DOM to read in and manipulate XML </objective>
+		<objective>Understand the mechanism by which data from databases can be converted into XML using a combination of JAXP and JDBC and vice versa. </objective>
+		<objective>Write a basic XSLT stylesheet, and use it to transform an XML grammar into HTML, XHTML, or an alternative XML grammar. </objective>
+		<objective>Implement data binding using JAXB. </objective>
+		<objective>Understand how Web services are implemented using the Java programming Language </objective>
+	</objectives>
+	<who>
+			This course is aimed at anyone who is experienced in Java Programming who needs to incorporate XML processing into his or her Java application development. Delegates should also be familiar with XML syntax. 
+</who>
+	<layout>
+The course combines lectures with practical exercises that help the delegates to put what they have learned on the course into practice.   The exercises specifically build on what has been recently taught and are built up as the course progresses.
+</layout>
+	<prerequisites>
+		<prereq>Delegates should be familiar with the Java Programming language as far as understand how to work in an OO environment and grasping the basic use of Java. They should also be familiar with XML technology. </prereq>
+		<prereq>Knowledge of the Java Programming Language can be obtained from our Java Programming Course. XML experience can come from the XML Overview course. </prereq>
+	</prerequisites>
+	<contents>
+		<chapter>
+			<title>Java and XML </title>
+			<objective>What is XML? </objective>
+			<objective>XML Syntax </objective>
+			<objective>Java Support for XML </objective>
+			<objective>Where XML fits into Java applications </objective>
+		</chapter>
+		<chapter>
+			<title>Java Parsers and Validation </title>
+			<objective>Well formed and valid XML </objective>
+			<objective>JAXP Parsers </objective>
+			<objective>Xerces  Parser </objective>
+			<objective>Validation against XML Schemas </objective>
+		</chapter>
+		<chapter>
+			<title>Simple APIs for XML Parsing - SAX </title>
+			<objective>Introduction to the SAX APIs </objective>
+			<objective>Defining the SAX Document Handler </objective>
+			<objective>Defining the SAX Error Handler </objective>
+		</chapter>
+		<chapter>
+			<title>Document Object Model (DOM) </title>
+			<objective>Introduction to the DOM APIs </objective>
+			<objective>The anatomy of a Document Object </objective>
+			<objective>Creating and manipulating Document objects</objective>
+			<objective>An introduction to XML namespaces </objective>
+			<objective>Namespaces and Document objects </objective>
+			<objective>Writing out Document objects </objective>
+		</chapter>
+		<chapter>
+			<title>JDOM the DOM alternative </title>
+			<objective>Using JDOM </objective>
+			<objective>The JDOM API </objective>
+			<objective>Pros and Cons of DOM vs  JDOM </objective>
+		</chapter>
+		<chapter>
+			<title>JDBC and JAXP </title>
+			<objective>An introduction to Java Database Connectivity (JDBC) </objective>
+			<objective>Combining JDBC with JAXP to generate XML content </objective>
+			<objective>XML data and Databases </objective>
+		</chapter>
+		<chapter>
+			<title>Data Binding </title>
+			<objective>Introduction to the concept of data binding </objective>
+			<objective>Implementing data binding using JAXB </objective>
+		</chapter>
+		<chapter>
+			<title>XSLT and Java technology </title>
+			<objective>An Introduction to XSLT </objective>
+			<objective>An Introduction to XPath  </objective>
+			<objective>Applying XSLT from Java applications </objective>
+		</chapter>
+		<chapter>
+			<title>Using XML in Web Applications </title>
+			<objective>XML features of JSP2.0 </objective>
+			<objective>Using the JSTL XML Standard Actions </objective>
+		</chapter>
+		<chapter>
+			<title>Introducing Web Services using Java </title>
+			<objective>SOAP </objective>
+			<objective>WSDL </objective>
+			<objective>Deploying a basic Web service in Apache Axis </objective>
+			<objective>Creating a basic Web service client </objective>
+		</chapter>
+	</contents>
+</course>
