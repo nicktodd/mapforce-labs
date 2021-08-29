@@ -103,5 +103,56 @@ select * from compact_discs;
 ![The Query Editor](images/select-all-results.png)
 
 
+## Generating the Java Code for the Mapping
 
+You will now see the code autogeneration feature of Mapforce. To complete this exercise, you will need to be on a machine with:
 
+*. MySQL installed
+*. JDK version 1.8 or higher
+*. Eclipse
+*. The MySQL Database driver
+
+If you are on a provided virtual machine, then this is already all in place for you.
+
+32. Ensure that your mapping project from the first part of this lab is open within Mapforce.
+
+33. Within Mapforce, select **File** / **Generate Code In** / **Java**.
+
+34. For the location, create a folder on your computer eg. ```c:\MapforceLabs\MyJavaProject```. You will need to create the MyJavaProject directory or equivalent since Mapforce puts your project directly intou your selected folder.
+
+35. Now launch **Eclipse**. When it has launched it will ask your select a Workspace. For the workspace folder select the directory immediately above your Eclipse project, eg. ```c:\MapforceLabs```.
+
+36. Once Eclipse has launched, select **File** / **Import**.
+
+37. At the **Import** dialog box, expand **General** and then select **Existing Projects into Workspace**. Click **Next**.
+
+38. At the **Import Projects** dialog, at the **Select root directory**, click **Browse** and then click **Select folder**, since it defaults to the folder where your workspace is so you do not need to change anything.
+
+39. Your project will now appear in the list of projects, so select it and then click **Finish**.
+
+40. Once your project is imported, expand the directory containing all the files. You will see in there the folder called **com.mapforce**. This is the package name for your classes. Note that this can be changed in Mapforce if a different package is required.
+
+41. Before we can run the project, we do need to add the MySQL database driver. To do this, right click on your project and then select **Build Path** / **Configure Build Path**.
+
+42. Select **Modulepath**, and then click **Add External Jars**. Browse to ```C:\Java\mysql-connector-java-8.0.26``` and select the ```mysql-connector-java-8.0.26.jar``` file.
+Click **OK** and and then **Apply and Close**.
+
+43. Open the Java file called ```MappingConsole.java```.
+
+44. Locate the line around lime 35 that starts with Class.forName() and amend the driver class to the following:
+
+```
+Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+```
+
+This is because MySQL have a new Driver class but the Altova code doesn't use it.
+
+45. Finally, locate around line 69 that starts as follows and change the file output to simply 'music.xml'.
+
+```
+com.altova.io.Output music2Target = new com.altova.io.FileOutput("music.xml");
+```
+
+46. That is all that is required. So now right click anywhere in the code, and select **Run As** / **Java Application**.
+
+47. Right click on the project and click **Refresh**. YOu will see a new XML file in the project structure. Open the file and you will see it contains XML with data from the database
