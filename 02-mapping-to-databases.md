@@ -134,7 +134,7 @@ If you are on a provided virtual machine, then this is already all in place for 
 
 41. Before we can run the project, we do need to add the MySQL database driver. To do this, right click on your project and then select **Build Path** / **Configure Build Path**.
 
-42. Select **Modulepath**, and then click **Add External Jars**. Browse to ```C:\Java\mysql-connector-java-8.0.26``` and select the ```mysql-connector-java-8.0.26.jar``` file.
+42. Select the **Libraries** tab, and then select **Modulepath**, and then click **Add External Jars**. Browse to ```C:\Java\mysql-connector-java-8.0.26``` and select the ```mysql-connector-java-8.0.26.jar``` file.
 Click **OK** and and then **Apply and Close**.
 
 43. Open the Java file called ```MappingConsole.java```.
