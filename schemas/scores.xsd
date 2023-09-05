@@ -14,6 +14,7 @@
 							<xs:element name="percentage" type="xs:int"/>
 							<xs:element name="dateCompleted" type="xs:date"/>
 							<xs:element name="timeSubmitted" type="xs:time"/>
+							<xs:element name="studentType" type="xs:string" minOccurs="0"/>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>

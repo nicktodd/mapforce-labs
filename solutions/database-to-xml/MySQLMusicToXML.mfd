@@ -3,16 +3,16 @@
 <mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="29">
 	<resources>
 		<datasources>
-			<datasource name="conygre">
-				<properties JDBCDriver="com.mysql.jdbc.Driver" JDBCDatabaseURL="jdbc:mysql://localhost/conygre" DBUser="root" DBPassword="c0nygre1"/>
-				<database_connection vendor="mysql" import_kind="ADO.NET" version="8.0" ConnectionString="Host=localhost; DataBase=conygre; Protocol=TCP; Port=3306; Compress=false; Pooling=true; Min Pool Size=0; Max Pool Size=100; Connection Lifetime=0; User id=root;Password=c0nygre1" DriverClass="MySql.Data.MySqlClient" Assembly="MySql.Data.MySqlClient.MySqlClientFactory, MySql.Data, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" name="conygre" path="conygre">
+			<datasource name="conygre2">
+				<properties JDBCDriver="com.mysql.jdbc.Driver" JDBCDatabaseURL="jdbc:mysql://localhost/conygre" DBUser="root" DBPassword="c0nygre"/>
+				<database_connection vendor="mysql" import_kind="ADO.NET" version="8.0" ConnectionString="Compress=false;Connection Lifetime=0;DataBase=conygre;Host=localhost;Max Pool Size=100;Min Pool Size=0;Password=c0nygre;Pooling=true;Port=3306;Protocol=TCP;User id=root" DriverClass="MySql.Data.MySqlClient" Assembly="MySql.Data.MySqlClient.MySqlClientFactory, MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" name="conygre2" path="conygre2">
 					<properties>
 						<property name="Database Kind" value="MySQL"/>
 						<property name="Import Kind" value="ADO.NET"/>
 						<property name="Root Object" value="conygre"/>
 						<property name="Connect Script"/>
-						<property name="User ID"/>
-						<property name="Password" value="a1HuTH-gGFB67-5zGN61"/>
+						<property name="User ID" value="root"/>
+						<property name="Password" value="a1HuTH-GPKs21"/>
 					</properties>
 					<LocalViewStorage/>
 					<LocalRelationsStorage>
@@ -43,7 +43,7 @@
 		<structure>
 			<children>
 				<component name="music" library="xml" uid="2" kind="14">
-					<properties XSLTDefaultOutput="1"/>
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
 					<view ltx="402" lty="63" rbx="690" rby="263"/>
 					<data>
 						<root>
@@ -94,7 +94,7 @@
 								</entry>
 							</entry>
 						</root>
-						<database ref="conygre">
+						<database ref="conygre2">
 							<data>
 								<selections>
 									<selection>

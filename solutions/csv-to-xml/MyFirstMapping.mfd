@@ -6,6 +6,70 @@
 		<properties SelectedLanguage="builtin"/>
 		<structure>
 			<children>
+				<component name="Rows" library="core" uid="13" kind="30">
+					<sources>
+						<datapoint pos="0" key="14"/>
+						<datapoint pos="1" key="15"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="16"/>
+					</targets>
+					<view ltx="799" lty="92" rbx="896" rby="144"/>
+					<data>
+						<sort>
+							<collation/>
+							<key direction="ascending"/>
+						</sort>
+					</data>
+				</component>
+				<component name="Rows" library="core" uid="8" kind="3">
+					<sources>
+						<datapoint pos="0" key="17"/>
+						<datapoint pos="1" key="18"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="19"/>
+						<datapoint/>
+					</targets>
+					<view ltx="603" lty="42" rbx="703" rby="93"/>
+				</component>
+				<component name="constant" library="core" uid="12" kind="2">
+					<targets>
+						<datapoint pos="0" key="20"/>
+					</targets>
+					<view ltx="275" lty="52" rbx="317" rby="68"/>
+					<data>
+						<constant value="70" datatype="decimal"/>
+					</data>
+				</component>
+				<component name="greater" library="core" uid="11" kind="5">
+					<sources>
+						<datapoint pos="0" key="21"/>
+						<datapoint pos="1" key="22"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="23"/>
+					</targets>
+					<view ltx="413" lty="42" rbx="471" rby="93"/>
+				</component>
+				<component name="time-from-datetime" library="lang" uid="7" kind="5">
+					<sources>
+						<datapoint pos="0" key="12"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="13"/>
+					</targets>
+					<view ltx="351" lty="291" rbx="468" rby="326"/>
+				</component>
+				<component name="date-from-datetime" library="lang" uid="5" kind="5">
+					<sources>
+						<datapoint pos="0" key="6"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="7"/>
+					</targets>
+					<view ltx="350" lty="226" rbx="467" rby="261"/>
+				</component>
 				<component name="Scores" library="text" uid="2" kind="16">
 					<properties/>
 					<view ltx="-1" lty="106" rbx="219" rby="306"/>
@@ -41,11 +105,40 @@
 						</text>
 					</data>
 				</component>
+				<component name="constant" library="core" uid="17" kind="2">
+					<targets>
+						<datapoint pos="0" key="24"/>
+					</targets>
+					<view ltx="661" lty="356" rbx="699" rby="372"/>
+					<data>
+						<constant datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="16" kind="2">
+					<targets>
+						<datapoint pos="0" key="25"/>
+					</targets>
+					<view ltx="657" lty="339" rbx="698" rby="355"/>
+					<data>
+						<constant value=" " datatype="string"/>
+					</data>
+				</component>
+				<component name="replace" library="lang" uid="15" kind="5">
+					<sources>
+						<datapoint pos="0" key="26"/>
+						<datapoint pos="1" key="27"/>
+						<datapoint pos="2" key="28"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="29"/>
+					</targets>
+					<view ltx="701" lty="301" rbx="789" rby="367"/>
+				</component>
 				<component name="scores" library="xml" uid="3" kind="14">
 					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
-					<view ltx="1000" lty="92" rbx="1282" rby="292"/>
+					<view ltx="930" lty="92" rbx="1212" rby="292"/>
 					<data>
-						<root scrollposition="1">
+						<root>
 							<header>
 								<namespaces>
 									<namespace/>
@@ -68,69 +161,14 @@
 						<document schema="..\..\schemas\scores.xsd" instanceroot="{}scores" outputinstance="..\..\schemas\scores.xml"/>
 					</data>
 				</component>
-				<component name="Rows" library="core" uid="13" kind="30">
+				<component name="lowercase" library="lang" uid="19" kind="5">
 					<sources>
-						<datapoint pos="0" key="14"/>
-						<datapoint pos="1" key="15"/>
+						<datapoint pos="0" key="30"/>
 					</sources>
 					<targets>
-						<datapoint pos="0" key="16"/>
+						<datapoint pos="0" key="31"/>
 					</targets>
-					<view ltx="799" lty="92" rbx="909" rby="148"/>
-					<data>
-						<sort>
-							<collation/>
-							<key direction="ascending"/>
-						</sort>
-					</data>
-				</component>
-				<component name="Rows" library="core" uid="8" kind="3">
-					<sources>
-						<datapoint pos="0" key="17"/>
-						<datapoint pos="1" key="18"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="19"/>
-						<datapoint/>
-					</targets>
-					<view ltx="603" lty="42" rbx="716" rby="96"/>
-				</component>
-				<component name="constant" library="core" uid="12" kind="2">
-					<targets>
-						<datapoint pos="0" key="20"/>
-					</targets>
-					<view ltx="275" lty="52" rbx="321" rby="69"/>
-					<data>
-						<constant value="70" datatype="decimal"/>
-					</data>
-				</component>
-				<component name="greater" library="core" uid="11" kind="5">
-					<sources>
-						<datapoint pos="0" key="21"/>
-						<datapoint pos="1" key="22"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="23"/>
-					</targets>
-					<view ltx="413" lty="42" rbx="477" rby="96"/>
-				</component>
-				<component name="time-from-datetime" library="lang" uid="7" kind="5">
-					<sources>
-						<datapoint pos="0" key="12"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="13"/>
-					</targets>
-					<view ltx="351" lty="291" rbx="477" rby="329"/>
-				</component>
-				<component name="date-from-datetime" library="lang" uid="5" kind="5">
-					<sources>
-						<datapoint pos="0" key="6"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="7"/>
-					</targets>
-					<view ltx="350" lty="226" rbx="477" rby="264"/>
+					<view ltx="792" lty="318" rbx="863" rby="353"/>
 				</component>
 			</children>
 			<graph directed="1">
@@ -141,10 +179,9 @@
 							<edge vertexkey="1"/>
 						</edges>
 					</vertex>
-					<vertex vertexkey="9">
+					<vertex vertexkey="31">
 						<edges>
 							<edge vertexkey="2"/>
-							<edge vertexkey="15"/>
 						</edges>
 					</vertex>
 					<vertex vertexkey="10">
@@ -174,6 +211,12 @@
 							<edge vertexkey="14"/>
 						</edges>
 					</vertex>
+					<vertex vertexkey="9">
+						<edges>
+							<edge vertexkey="15"/>
+							<edge vertexkey="26"/>
+						</edges>
+					</vertex>
 					<vertex vertexkey="8">
 						<edges>
 							<edge vertexkey="17"/>
@@ -187,6 +230,21 @@
 					<vertex vertexkey="20">
 						<edges>
 							<edge vertexkey="21"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="25">
+						<edges>
+							<edge vertexkey="27"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="24">
+						<edges>
+							<edge vertexkey="28"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="29">
+						<edges>
+							<edge vertexkey="30"/>
 						</edges>
 					</vertex>
 				</vertices>

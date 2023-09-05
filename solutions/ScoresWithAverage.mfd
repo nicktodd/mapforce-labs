@@ -14,7 +14,7 @@
 					<targets>
 						<datapoint pos="0" key="16"/>
 					</targets>
-					<view ltx="799" lty="92" rbx="909" rby="148"/>
+					<view ltx="799" lty="92" rbx="896" rby="144"/>
 					<data>
 						<sort>
 							<collation/>
@@ -31,13 +31,13 @@
 						<datapoint pos="0" key="19"/>
 						<datapoint/>
 					</targets>
-					<view ltx="603" lty="42" rbx="716" rby="96"/>
+					<view ltx="603" lty="42" rbx="703" rby="93"/>
 				</component>
 				<component name="constant" library="core" uid="12" kind="2">
 					<targets>
 						<datapoint pos="0" key="20"/>
 					</targets>
-					<view ltx="275" lty="52" rbx="321" rby="69"/>
+					<view ltx="275" lty="52" rbx="317" rby="68"/>
 					<data>
 						<constant value="70" datatype="decimal"/>
 					</data>
@@ -50,7 +50,7 @@
 					<targets>
 						<datapoint pos="0" key="23"/>
 					</targets>
-					<view ltx="413" lty="42" rbx="477" rby="96"/>
+					<view ltx="413" lty="42" rbx="471" rby="93"/>
 				</component>
 				<component name="time-from-datetime" library="lang" uid="7" kind="5">
 					<sources>
@@ -59,7 +59,7 @@
 					<targets>
 						<datapoint pos="0" key="13"/>
 					</targets>
-					<view ltx="351" lty="291" rbx="477" rby="329"/>
+					<view ltx="351" lty="291" rbx="468" rby="326"/>
 				</component>
 				<component name="date-from-datetime" library="lang" uid="5" kind="5">
 					<sources>
@@ -68,35 +68,7 @@
 					<targets>
 						<datapoint pos="0" key="7"/>
 					</targets>
-					<view ltx="350" lty="226" rbx="477" rby="264"/>
-				</component>
-				<component name="scores" library="xml" uid="3" kind="14">
-					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
-					<view ltx="1000" lty="92" rbx="1282" rby="292"/>
-					<data>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="FileInstance" ns="1" expanded="1">
-								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-									<entry name="scores" expanded="1">
-										<entry name="score" inpkey="1" expanded="1">
-											<entry name="studentCode" inpkey="2" expanded="1"/>
-											<entry name="percentage" inpkey="3" expanded="1"/>
-											<entry name="dateCompleted" inpkey="4" expanded="1"/>
-											<entry name="timeSubmitted" inpkey="5" expanded="1"/>
-										</entry>
-										<entry name="averageScore" inpkey="24"/>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\scoresWithSummary.xsd" instanceroot="{}scores" outputinstance="..\schemas\scores.xml"/>
-					</data>
+					<view ltx="350" lty="226" rbx="467" rby="261"/>
 				</component>
 				<component name="Scores" library="text" uid="2" kind="16">
 					<properties/>
@@ -141,7 +113,54 @@
 					<targets>
 						<datapoint pos="0" key="26"/>
 					</targets>
-					<view ltx="742" lty="291" rbx="867" rby="345"/>
+					<view ltx="627" lty="291" rbx="739" rby="342"/>
+				</component>
+				<component name="scores" library="xml" uid="3" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="1000" lty="92" rbx="1282" rby="292"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="scores" expanded="1">
+										<entry name="score" inpkey="1" expanded="1">
+											<entry name="studentCode" inpkey="2" expanded="1"/>
+											<entry name="percentage" inpkey="3" expanded="1"/>
+											<entry name="dateCompleted" inpkey="4" expanded="1"/>
+											<entry name="timeSubmitted" inpkey="5" expanded="1"/>
+										</entry>
+										<entry name="averageScore" inpkey="24"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\schemas\scoresWithSummary.xsd" instanceroot="{}scores" outputinstance="..\schemas\scores.xml"/>
+					</data>
+				</component>
+				<component name="round-precision" library="core" uid="25" kind="5">
+					<sources>
+						<datapoint pos="0" key="28"/>
+						<datapoint pos="1" key="29"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="30"/>
+					</targets>
+					<view ltx="841" lty="275" rbx="941" rby="326"/>
+				</component>
+				<component name="constant" library="core" uid="26" kind="2">
+					<targets>
+						<datapoint pos="0" key="27"/>
+					</targets>
+					<view ltx="804" lty="310" rbx="840" rby="326"/>
+					<data>
+						<constant value="2" datatype="decimal"/>
+					</data>
 				</component>
 			</children>
 			<graph directed="1">
@@ -201,9 +220,19 @@
 							<edge vertexkey="21"/>
 						</edges>
 					</vertex>
-					<vertex vertexkey="26">
+					<vertex vertexkey="30">
 						<edges>
 							<edge vertexkey="24"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="26">
+						<edges>
+							<edge vertexkey="28"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="27">
+						<edges>
+							<edge vertexkey="29"/>
 						</edges>
 					</vertex>
 				</vertices>
